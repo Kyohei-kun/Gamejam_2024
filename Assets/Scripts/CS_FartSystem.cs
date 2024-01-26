@@ -2,19 +2,42 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.XR;
+
 
 public class CS_FartSystem : MonoBehaviour
 {
-    float cooldown = 0.5f;
-    float currentCooldown = 0f;
+    [SerializeField] List<AudioClip> fartClips;
+
+    [SerializeField] float cooldown = 0.5f;
+    [SerializeField] float currentCooldown = 0f;
+
+    private void Update()
+    {
+        if(currentCooldown != 0)
+        {
+            currentCooldown -= Time.deltaTime;
+            currentCooldown = Mathf.Clamp(currentCooldown, 0, cooldown);
+        }
+    }
 
     private void OnFart(InputValue value)
+    {
+        if (currentCooldown == 0)
+        {
+            currentCooldown = cooldown;
+            AudioSource.PlayClipAtPoint(fartClips[Random.Range(0, fartClips.Count - 1)], transform.position);
+            CheckItems();
+        }
+    }
+
+    private void CheckItems()
     {
         int i = -1;
         foreach (var item in FartMagazin.items)
         {
             i++;
-            if(Vector3.Distance(item.transform.position, transform.position) < FartMagazin.distance[i])
+            if (Vector3.Distance(item.transform.position, transform.position) < FartMagazin.distance[i])
             {
                 FartMagazin.iFarts[i].FartInteract();
             }
@@ -29,7 +52,7 @@ public static class FartMagazin
     public static List<float> distance = new List<float>();
 
 
-    public static void AddAbo(CS_I_Fart fart,GameObject go, float distanceTrigger)
+    public static void AddAbo(CS_I_Fart fart, GameObject go, float distanceTrigger)
     {
         iFarts.Add(fart);
         items.Add(go);
