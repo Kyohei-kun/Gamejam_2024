@@ -8,6 +8,7 @@ using UnityEngine.InputSystem.XR;
 public class CS_FartSystem : MonoBehaviour
 {
     [SerializeField] List<AudioClip> fartClips;
+    [SerializeField] Animator animator;
 
     [SerializeField] float cooldown = 0.5f;
     [SerializeField] float currentCooldown = 0f;
@@ -25,6 +26,8 @@ public class CS_FartSystem : MonoBehaviour
     {
         if (currentCooldown == 0)
         {
+            animator.SetFloat("NumFart", Random.Range(0,2));
+            animator.SetTrigger("Fart");
             currentCooldown = cooldown;
             AudioSource.PlayClipAtPoint(fartClips[Random.Range(0, fartClips.Count - 1)], transform.position);
             CheckItems();
