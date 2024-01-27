@@ -22,7 +22,10 @@ public class CS_GrabSystem : MonoBehaviour
                 currentGrab.transform.parent = socket;
                 currentGrab.transform.localPosition = Vector3.zero;
                 currentGrab.GetComponent<Rigidbody>().isKinematic = true;
-                currentGrab.GetComponent<CS_I_Item>().OnGrab();
+
+                CS_I_Item i_Item = currentGrab.GetComponent<CS_I_Item>();//.OnGrab();
+                if (i_Item != null)
+                    i_Item.OnGrab();
             }
         }
         else if(value.Get<float>()== 0)
@@ -31,7 +34,9 @@ public class CS_GrabSystem : MonoBehaviour
             {
                 currentGrab.GetComponent<Rigidbody>().isKinematic = false;
                 currentGrab.transform.parent = null;
-                currentGrab.GetComponent<CS_I_Item>().OnUnGrab();
+                CS_I_Item i_Item = currentGrab.GetComponent<CS_I_Item>();//.OnGrab();
+                if (i_Item != null)
+                    i_Item.OnUnGrab();
             }
         }
     }
