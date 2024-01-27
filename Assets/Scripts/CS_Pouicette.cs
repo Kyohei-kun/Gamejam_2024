@@ -6,14 +6,16 @@ using UnityEngine.VFX;
 
 public class CS_Pouicette : MonoBehaviour
 {
-    bool finish = false;
+    bool finish = true;
     [SerializeField] VisualEffect FX_Love;
+
+    public bool Finish { get => finish; set => finish = value; }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Ring") && finish == false)
+        if (other.gameObject.CompareTag("Ring") && Finish == false)
         {
-            finish = true;
+            Finish = true;
             QuestSystem.PlayVictoryFX(transform.position);
             FX_Love.Play();
         }        
