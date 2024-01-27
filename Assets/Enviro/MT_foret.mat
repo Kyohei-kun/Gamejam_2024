@@ -91,7 +91,7 @@ Material:
     - _RenderQueueType: 1
     - _RequireSplitLighting: 0
     - _RoughnessMultiplier: 1
-    - _Roughness_multiplier: 0
+    - _Roughness_multiplier: 3.26
     - _SrcBlend: 1
     - _StencilRef: 0
     - _StencilRefDepth: 8
@@ -117,13 +117,13 @@ Material:
     - _ZTestGBuffer: 4
     - _ZTestTransparent: 4
     - _ZWrite: 1
-    - _normal_strenght: 0
+    - _normal_strenght: 2.51
     - _tiling: 0.18
     m_Colors:
     - _AlbedoTint: {r: 1, g: 1, b: 1, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Tint: {r: 1, g: 1, b: 1, a: 0}
+    - _Tint: {r: 0.25, g: 0.25, b: 0.25, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &6414081717970261150
 MonoBehaviour:
