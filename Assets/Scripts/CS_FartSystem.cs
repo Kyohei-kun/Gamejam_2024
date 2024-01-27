@@ -35,8 +35,9 @@ public class CS_FartSystem : MonoBehaviour
             currentCooldown = cooldown;
             audioSource.volume = 0.4f;
             fxFart.Play();
-            //audioSource.clip = fartClips[Random.Range(0, fartClips.Count - 1)];
-            audioSource.PlayOneShot(fartClips[Random.Range(0, fartClips.Count - 1)]);
+            AudioClip fart = fartClips[Random.Range(0, fartClips.Count - 1)];
+            audioSource.clip = fart;
+            audioSource.PlayOneShot(fart);
             CheckItems();
         }
     }
