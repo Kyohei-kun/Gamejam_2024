@@ -91,7 +91,7 @@ Material:
     - _RenderQueueType: 1
     - _RequireSplitLighting: 0
     - _RoughnessMultiplier: 1
-    - _Roughness_multiplier: 1
+    - _Roughness_multiplier: 3
     - _SrcBlend: 1
     - _StencilRef: 0
     - _StencilRefDepth: 8
@@ -117,7 +117,7 @@ Material:
     - _ZTestGBuffer: 4
     - _ZTestTransparent: 4
     - _ZWrite: 1
-    - _normal_strenght: 1
+    - _normal_strenght: 0.332
     - _tiling: 0.09
     m_Colors:
     - _AlbedoTint: {r: 1, g: 1, b: 1, a: 0}
