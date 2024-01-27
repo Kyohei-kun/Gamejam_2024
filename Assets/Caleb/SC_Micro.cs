@@ -9,9 +9,12 @@ public class SC_Micro : MonoBehaviour, CS_I_Fart
 
     public void FartInteract()
     {
-        if(enceinte.JackPlugged.IsMic)
+        if(enceinte.JackPlugged)
         {
-            enceinte.MicPlay();
+            if (enceinte.JackPlugged.IsMic)
+            {
+                enceinte.MicPlay();
+            }
         }
     }
 

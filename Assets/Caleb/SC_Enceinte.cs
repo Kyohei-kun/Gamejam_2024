@@ -19,7 +19,7 @@ public class SC_Enceinte : MonoBehaviour
     
     public void PcPlay()
     {
-        GetComponent<AudioReverbFilter>().enabled = false;
+        audioSource.GetComponent<AudioReverbFilter>().enabled = false;
         audioSource.clip = pcMusic;
         audioSource.loop = true;
         audioSource.Play();
@@ -28,26 +28,35 @@ public class SC_Enceinte : MonoBehaviour
     public void MicPlay()
     {
         audioSource.loop = false;
-        GetComponent<AudioReverbFilter>().enabled = true;
-        audioSource.PlayOneShot(playerAudio.clip);
+        audioSource.GetComponent<AudioReverbFilter>().enabled = true;
+        audioSource.clip = playerAudio.clip;
+        audioSource.PlayDelayed(0.2f);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.GetComponent<SC_Jack>() && jackPlugged == null)
+        if(other.gameObject.GetComponent<SC_Jack>())
         {
-            jackPlugged = other.GetComponent<SC_Jack>();
-            other.attachedRigidbody.useGravity = false;
-            other.transform.position = pivotJack.transform.position;
+            if(jackPlugged == null && !other.gameObject.GetComponent<SC_Jack>().IsGrab)
+            {
+                jackPlugged = other.GetComponent<SC_Jack>();
+                other.gameObject.GetComponent<Rigidbody>().useGravity = false;
+                other.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+                other.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                other.gameObject.GetComponent<MeshCollider>().isTrigger = true;
+                other.gameObject.transform.SetPositionAndRotation(pivotJack.transform.position, pivotJack.transform.rotation);
 
-            if(jackPlugged.IsPc)
-                PcPlay();
+                if (jackPlugged.IsPc)
+                    PcPlay();
+            }
+
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.GetComponent<SC_Jack>() == jackPlugged)
+        Debug.Log("exit");
+        if (other.gameObject.GetComponent<SC_Jack>() == jackPlugged)
         {
             jackPlugged = null;
 
