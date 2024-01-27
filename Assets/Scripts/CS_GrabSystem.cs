@@ -18,11 +18,12 @@ public class CS_GrabSystem : MonoBehaviour
             List<Collider> col = Physics.OverlapSphere(transform.position, 5, layerMask).ToList();
             if(col.Count>0)
             {
-                currentGrab = col[0].gameObject;
+                List<Collider> sortedList = col.OrderBy(obj => Vector3.Distance(transform.position, obj.transform.position)).ToList();
+                currentGrab = sortedList[0].gameObject;
+                
                 currentGrab.transform.parent = socket;
                 currentGrab.transform.localPosition = Vector3.zero;
                 currentGrab.GetComponent<Rigidbody>().isKinematic = true;
-
                 CS_I_Item i_Item = currentGrab.GetComponent<CS_I_Item>();//.OnGrab();
                 if (i_Item != null)
                     i_Item.OnGrab();

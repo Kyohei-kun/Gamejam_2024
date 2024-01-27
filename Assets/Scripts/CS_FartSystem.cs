@@ -31,8 +31,8 @@ public class CS_FartSystem : MonoBehaviour
             animator.SetFloat("NumFart", Random.Range(0,2));
             animator.SetTrigger("Fart");
             currentCooldown = cooldown;
-            audioSource.clip = fartClips[Random.Range(0, fartClips.Count - 1)];
-            audioSource.Play();
+            //audioSource.clip = fartClips[Random.Range(0, fartClips.Count - 1)];
+            audioSource.PlayOneShot(fartClips[Random.Range(0, fartClips.Count - 1)]);
             CheckItems();
         }
     }
