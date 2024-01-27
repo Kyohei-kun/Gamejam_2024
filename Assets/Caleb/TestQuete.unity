@@ -1942,6 +1942,16 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 4129088499199835800, guid: defe070c9fb321946a2dceaa385a8268,
+        type: 3}
+      propertyPath: m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4129088499199835800, guid: defe070c9fb321946a2dceaa385a8268,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4192628554395165676, guid: defe070c9fb321946a2dceaa385a8268,
         type: 3}
       propertyPath: m_LocalPosition.x
