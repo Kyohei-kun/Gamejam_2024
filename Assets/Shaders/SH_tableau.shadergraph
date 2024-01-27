@@ -3723,7 +3723,7 @@
     "m_DefaultRefNameVersion": 1,
     "m_RefNameGeneratedByDisplayName": "Vert foncé",
     "m_DefaultReferenceName": "_Vert_fonc",
-    "m_OverrideReferenceName": "",
+    "m_OverrideReferenceName": "_VertF",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
     "m_CustomSlotLabel": "",

@@ -86,7 +86,7 @@ Material:
     - _EnableBlendModePreserveSpecularLighting: 1
     - _EnableFogOnTransparent: 1
     - _MetallicMultiplier: 0
-    - _Noir: 1
+    - _Noir: 0
     - _OpaqueCullMode: 2
     - _RayTracing: 0
     - _ReceivesSSR: 1
@@ -116,7 +116,8 @@ Material:
     - _TransparentWritingMotionVec: 0
     - _TransparentZWrite: 0
     - _UseShadowThreshold: 0
-    - _Vert: 1
+    - _Vert: 0
+    - _VertF: 0
     - _Vert_fonc: 1
     - _ZTestDepthEqualForOpaque: 3
     - _ZTestGBuffer: 4
