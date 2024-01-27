@@ -36,6 +36,7 @@ public class CS_FartSystem : MonoBehaviour
 
     private void CheckItems()
     {
+        FartMagazin.CleanList();
         int i = -1;
         foreach (var item in FartMagazin.items)
         {
@@ -60,5 +61,18 @@ public static class FartMagazin
         iFarts.Add(fart);
         items.Add(go);
         distance.Add(distanceTrigger);
+    }
+
+    public static void CleanList()
+    {
+        for (int i = 0; i < items.Count; i++)
+        {
+            if (items[i] == null)
+            {
+                items.RemoveAt(i);
+                iFarts.RemoveAt(i);
+                distance.RemoveAt(i);
+            }
+        }
     }
 }
