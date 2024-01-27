@@ -101,6 +101,7 @@ Material:
     m_Colors:
     - _DoubleSidedConstants: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Tint: {r: 0.49982202, g: 0.9056604, b: 0.8932294, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &8860868533342085162
 MonoBehaviour:
