@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.XR;
+using UnityEngine.VFX;
 
 
 public class CS_FartSystem : MonoBehaviour
 {
+    [SerializeField] VisualEffect fxFart;
     [SerializeField] List<AudioClip> fartClips;
     [SerializeField] AudioSource audioSource;
     [SerializeField] Animator animator;
@@ -32,6 +34,7 @@ public class CS_FartSystem : MonoBehaviour
             animator.SetTrigger("Fart");
             currentCooldown = cooldown;
             audioSource.volume = 0.4f;
+            fxFart.Play();
             //audioSource.clip = fartClips[Random.Range(0, fartClips.Count - 1)];
             audioSource.PlayOneShot(fartClips[Random.Range(0, fartClips.Count - 1)]);
             CheckItems();

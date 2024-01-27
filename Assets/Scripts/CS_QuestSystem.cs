@@ -7,6 +7,8 @@ using UnityEngine.VFX;
 public class CS_QuestSystem : MonoBehaviour
 {
     [SerializeField] VisualEffect effect;
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip audioClip;
 
     private void Start()
     {
@@ -17,6 +19,8 @@ public class CS_QuestSystem : MonoBehaviour
     {
         effect.transform.position = position;
         effect.Play();
+        audioSource.clip = audioClip;
+        audioSource.PlayOneShot(audioSource.clip);
     }
 }
 
