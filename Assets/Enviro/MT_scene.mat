@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MT_Murs
+  m_Name: MT_scene
   m_Shader: {fileID: -6465566751694194690, guid: fc0619ff1d9aa0a408dd1ad7070fed9e,
     type: 3}
   m_Parent: {fileID: 0}
@@ -32,7 +32,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Albedo:
-        m_Texture: {fileID: 2800000, guid: 1282aedba54daa148b02875f2631d7cb, type: 3}
+        m_Texture: {fileID: 2800000, guid: 29450cb76b121f7418006898e17ef818, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Metallic:
@@ -44,11 +44,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _normal:
-        m_Texture: {fileID: 2800000, guid: ff87c28043f737a4989be0b133fcdfa4, type: 3}
+        m_Texture: {fileID: 2800000, guid: c4c6f1e6692224549961ba571816b26e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _roughness:
-        m_Texture: {fileID: 2800000, guid: 026fd857d617eb64c8fc86bfda3a38fc, type: 3}
+        m_Texture: {fileID: 2800000, guid: e1dbf06df096a0f45a9509e5ba092bd6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -91,7 +91,7 @@ Material:
     - _RenderQueueType: 1
     - _RequireSplitLighting: 0
     - _RoughnessMultiplier: 1
-    - _Roughness_multiplier: 1
+    - _Roughness_multiplier: 3
     - _SrcBlend: 1
     - _StencilRef: 0
     - _StencilRefDepth: 8
@@ -117,13 +117,13 @@ Material:
     - _ZTestGBuffer: 4
     - _ZTestTransparent: 4
     - _ZWrite: 1
-    - _normal_strenght: 1
-    - _tiling: 0.09
+    - _normal_strenght: 0.129
+    - _tiling: 0.28
     m_Colors:
     - _AlbedoTint: {r: 1, g: 1, b: 1, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Tint: {r: 1, g: 1, b: 1, a: 0}
+    - _Tint: {r: 4, g: 4, b: 4, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &6414081717970261150
 MonoBehaviour:

@@ -118,11 +118,12 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 1
     - _normal_strenght: 0
-    - _tiling: 0.06
+    - _tiling: 0.18
     m_Colors:
     - _AlbedoTint: {r: 1, g: 1, b: 1, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Tint: {r: 1, g: 1, b: 1, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &6414081717970261150
 MonoBehaviour:
