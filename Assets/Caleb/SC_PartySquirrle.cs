@@ -48,7 +48,6 @@ public class SC_PartySquirrle : MonoBehaviour, CS_I_Fart
 
         if (enceinte.JackPlugged.IsMic)
         {
-
             if (throwItem)
             {
                 animator.SetTrigger("throw");
@@ -57,6 +56,8 @@ public class SC_PartySquirrle : MonoBehaviour, CS_I_Fart
             {
                 animator.SetTrigger("booh");
             }
+
+            QuestSystem.PlayVictoryFX(enceinte.transform.position);
         }
     }
 
