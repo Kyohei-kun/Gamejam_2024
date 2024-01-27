@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-4931616930763639972
+--- !u!114 &-6724788774690008173
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -23,8 +23,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MT_Eau
-  m_Shader: {fileID: -6465566751694194690, guid: 72580b6f375a28f49aed0b41ecb9be06,
+  m_Name: MT_Lave
+  m_Shader: {fileID: -6465566751694194690, guid: dbe0610e5315a1d4ca0173b5542c5793,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -47,12 +47,8 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _SampleTexture2D_e333cb62f93b4e6d9a892e98afb9c724_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: 28e23f6283303f94ab3adb097e4c55ce, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_f98d1879fa1646348d3e9ba28621616a_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: 98413d91de13b5d49a52b1081d3852e2, type: 3}
+    - _SampleTexture2D_9b4a8f88ad7941eb99086efb9a0bf56f_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 8ea24b0713b47d749ba98b3dff2fdb22, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -84,7 +80,7 @@ Material:
     - _DstBlend: 0
     - _EnableBlendModePreserveSpecularLighting: 1
     - _EnableFogOnTransparent: 1
-    - _Opacit: 0.5
+    - _Opacit: 1
     - _OpaqueCullMode: 2
     - _RayTracing: 0
     - _ReceivesSSR: 1
@@ -105,7 +101,7 @@ Material:
     - _StencilWriteMaskMV: 41
     - _SupportDecals: 1
     - _SurfaceType: 0
-    - _Tile: 4
+    - _Tile: 2
     - _TransparentBackfaceEnable: 0
     - _TransparentCullMode: 2
     - _TransparentDepthPostpassEnable: 0
@@ -114,13 +110,13 @@ Material:
     - _TransparentWritingMotionVec: 0
     - _TransparentZWrite: 0
     - _UseShadowThreshold: 0
-    - _Water_ofseet_time: 15
+    - _Water_ofseet_time: 19
     - _ZTestDepthEqualForOpaque: 3
     - _ZTestGBuffer: 4
     - _ZTestTransparent: 4
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.6274475, g: 0.7668464, b: 0.9433962, a: 0}
+    - _Color: {r: 0.9716981, g: 0.65184724, b: 0.43543077, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
