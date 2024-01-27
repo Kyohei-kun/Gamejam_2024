@@ -6,6 +6,12 @@ public class SC_FishingBear : MonoBehaviour
 {
     [SerializeField]
     GameObject head;
+    [SerializeField]
+    GameObject fxPouf;
+    [SerializeField]
+    List<AudioClip> clipList = new List<AudioClip>();
+    [SerializeField]
+    Transform rigBear;
 
     List<GameObject> listFish = new List<GameObject>();
     bool reactPlayer = false;
@@ -43,6 +49,7 @@ public class SC_FishingBear : MonoBehaviour
         {
             player = other.gameObject;
             reactPlayer = true;
+            GetComponent<AudioSource>().PlayOneShot(clipList[Random.Range(0, clipList.Count-1)]);
         }
     }
     private void OnTriggerExit(Collider other)
@@ -57,12 +64,20 @@ public class SC_FishingBear : MonoBehaviour
     void BearReactPlayer()
     { 
         head.transform.LookAt(player.transform.position);
-        //roar sound + anim
+        
+
     }
 
     private void BearLeave()
     {
-        //leave animation
-        Debug.Log("Bear Leave");
+        GetComponent<Animator>().SetTrigger("leave");
+        QuestSystem.PlayVictoryFX(transform.position);
+    }
+
+    public void Dissapear()
+    {
+        GameObject fx = GameObject.Instantiate(fxPouf, rigBear.position, Quaternion.identity);
+        fx.transform.localScale += Vector3.one * 5;
+        GameObject.Destroy(gameObject);
     }
 }
