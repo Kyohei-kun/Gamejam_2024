@@ -13,8 +13,9 @@ public class CS_QuestSystem : MonoBehaviour
         QuestSystem.Init();
     }
 
-    public void PlayVictoryFX()
+    public void PlayVictoryFX(Vector3 position)
     {
+        effect.transform.position = position;
         effect.Play();
     }
 }
@@ -27,8 +28,8 @@ public static class QuestSystem
         currentQuestSystem = GameObject.FindGameObjectWithTag("Player").GetComponent<CS_QuestSystem>();
     }
 
-    public static void PlayVictoryFX()
+    public static void PlayVictoryFX(Vector3 position)
     {
-        currentQuestSystem.PlayVictoryFX();
+        currentQuestSystem.PlayVictoryFX(position);
     }
 }

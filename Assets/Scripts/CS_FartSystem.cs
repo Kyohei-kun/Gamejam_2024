@@ -74,5 +74,15 @@ public static class FartMagazin
                 distance.RemoveAt(i);
             }
         }
+
+        for (int i = 0; i < iFarts.Count; i++)
+        {
+            if (iFarts[i] == null)
+            {
+                items.RemoveAt(i);
+                iFarts.RemoveAt(i);
+                distance.RemoveAt(i);
+            }
+        }
     }
 }
