@@ -282,8 +282,8 @@
                 {
                     "name": "",
                     "id": "7f8911a1-f5a7-4ee0-9175-ffbfcbc193b5",
-                    "path": "<Gamepad>/buttonEast",
-                    "interactions": "Press(behavior=2)",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "Press(pressPoint=1,behavior=2)",
                     "processors": "",
                     "groups": "",
                     "action": "Grab",

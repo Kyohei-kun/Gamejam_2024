@@ -15,10 +15,6 @@ public class CS_GrabSystem : MonoBehaviour
     [SerializeField] AudioClip audioClip_Grab;
     [SerializeField] AudioClip audioClip_UnGrab;
 
-    private void Start()
-    {
-    }
-
     private void OnGrab(InputValue value)
     {
         if (value.Get<float>() == 1)
@@ -40,7 +36,7 @@ public class CS_GrabSystem : MonoBehaviour
 
             }
         }
-        else if (value.Get<float>() == 0)
+        else if (value.Get<float>() < 0.9)
         {
             if (currentGrab != null)
             {
