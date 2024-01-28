@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalModel: {fileID: 34026808916670600}
   fannedModel: {fileID: 6764691684921916322}
+  petals: {fileID: 0}
 --- !u!1001 &745157924445411269
 PrefabInstance:
   m_ObjectHideFlags: 0
