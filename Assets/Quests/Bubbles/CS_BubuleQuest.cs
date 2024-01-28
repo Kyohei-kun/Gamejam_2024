@@ -16,7 +16,7 @@ public class CS_BubuleQuest : MonoBehaviour
         if(playerInWater && finish == false)
         {
             finish = true;
-            fx.transform.position = GameObject.FindGameObjectWithTag("Player").transform.position + Vector3.up * 0.5f;
+            fx.transform.position = GameObject.FindGameObjectWithTag("Player").transform.position + Vector3.up * 1f;
             fx.gameObject.SetActive(true);
             QuestSystem.PlayVictoryFX(transform.position);
             CS_QuestUISystem.Validate(7);
