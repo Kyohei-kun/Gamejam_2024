@@ -42,6 +42,7 @@ public class CS_TableauQuest : MonoBehaviour, CS_I_Fart
         if(vert && vertF && noir)
         {
             QuestSystem.PlayVictoryFX(transform.position);
+            CS_QuestUISystem.Validate(1);
         }
     }
 

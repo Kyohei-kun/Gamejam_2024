@@ -14,6 +14,7 @@ public class CS_FlowerQuest : MonoBehaviour
         if(currentFlowerFanned >= flowers.Count)
         {
             QuestSystem.PlayVictoryFX(flowerPos);
+            CS_QuestUISystem.Validate(0);
         }
     }
 
