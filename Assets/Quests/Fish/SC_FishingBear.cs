@@ -59,6 +59,7 @@ public class SC_FishingBear : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             reactPlayer = false;
+            GetComponent<Animator>().enabled = true;
             head.transform.rotation = Quaternion.identity;
         }
     }
@@ -66,8 +67,9 @@ public class SC_FishingBear : MonoBehaviour
     void BearReactPlayer()
     { 
         head.transform.LookAt(player.transform.position);
-        
-
+        head.transform.Rotate(Vector3.up,-90);
+        head.transform.Rotate(Vector3.forward,-90);
+        GetComponent<Animator>().enabled = false;
     }
 
     private void BearLeave()

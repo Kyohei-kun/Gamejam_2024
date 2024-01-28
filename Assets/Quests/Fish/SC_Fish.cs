@@ -24,16 +24,17 @@ public class SC_Fish : MonoBehaviour, CS_I_Fart
         FartMagazin.AddAbo(this, gameObject, 5);
         obj = gameObject;
     }
-
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "TriggerLac")
+        Debug.Log(other.tag);
+        if (other.gameObject.tag == "TriggerLac")
         {
             bear.ListFish.Remove(gameObject);
             GameObject.Instantiate(fxExplode, transform.position, Quaternion.identity);
             GameObject.Destroy(gameObject);
         }
     }
+
 
     void Update()
     {
