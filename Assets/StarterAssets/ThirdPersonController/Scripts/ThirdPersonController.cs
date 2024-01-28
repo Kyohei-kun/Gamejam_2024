@@ -1,6 +1,7 @@
 ﻿ using UnityEngine;
 #if ENABLE_INPUT_SYSTEM 
 using UnityEngine.InputSystem;
+using UnityEngine.VFX;
 #endif
 
 /* Note: animations are called via the controller for both the character and capsule using animator null checks
@@ -14,6 +15,9 @@ namespace StarterAssets
 #endif
     public class ThirdPersonController : MonoBehaviour
     {
+        [SerializeField] VisualEffect fx_land;
+        [SerializeField] VisualEffect fx_Move;
+
         [Header("Player")]
         [Tooltip("Move speed of the character in m/s")]
         public float MoveSpeed = 2.0f;
@@ -46,6 +50,7 @@ namespace StarterAssets
         [Header("Player Grounded")]
         [Tooltip("If the character is grounded or not. Not part of the CharacterController built in grounded check")]
         public bool Grounded = true;
+        public bool lastGrounded = true;
 
         [Tooltip("Useful for rough ground")]
         public float GroundedOffset = -0.14f;
@@ -191,6 +196,11 @@ namespace StarterAssets
             {
                 _animator.SetBool(_animIDGrounded, Grounded);
             }
+            if (lastGrounded == false && Grounded == true)
+                fx_land.Play();
+
+            fx_Move.SetBool("grounded", Grounded);
+            lastGrounded = Grounded;
         }
 
         private void CameraRotation()
