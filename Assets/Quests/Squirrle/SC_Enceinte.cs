@@ -22,13 +22,13 @@ public class SC_Enceinte : MonoBehaviour
 
     private void Start()
     {
-        jackPlugged.gameObject.GetComponent<Rigidbody>().useGravity = false;
-        jackPlugged.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-        jackPlugged.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
-        jackPlugged.gameObject.GetComponent<MeshCollider>().isTrigger = true;
-        jackPlugged.gameObject.transform.SetPositionAndRotation(pivotJack.transform.position, pivotJack.transform.rotation);
+        //jackPlugged.gameObject.GetComponent<Rigidbody>().useGravity = false;
+        //jackPlugged.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+        //jackPlugged.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        //jackPlugged.gameObject.GetComponent<MeshCollider>().isTrigger = true;
+        //jackPlugged.gameObject.transform.SetPositionAndRotation(pivotJack.transform.position, pivotJack.transform.rotation);
 
-        PcPlay();
+        //PcPlay();
     }
 
     public void PcPlay()
