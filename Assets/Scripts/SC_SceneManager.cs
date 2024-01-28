@@ -24,6 +24,7 @@ public class SC_SceneManager : MonoBehaviour
         startcam.gameObject.SetActive(false);
         uiStartFolder.SetActive(false);
         uiInGameFolder.SetActive(true);
+		Cursor.visible = true;
     }
 
     public void PlayCredits()
