@@ -17,6 +17,7 @@ public class CS_Pouicette : MonoBehaviour
         {
             Finish = true;
             QuestSystem.PlayVictoryFX(transform.position);
+            CS_QuestUISystem.Validate(4);
             FX_Love.Play();            
         }        
     }

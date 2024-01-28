@@ -12,6 +12,7 @@ public class CS_Lava : MonoBehaviour
         {
             finish = true;
             QuestSystem.PlayVictoryFX(other.transform.position);
+            CS_QuestUISystem.Validate(3);
             Destroy(other.gameObject);
         }
     }

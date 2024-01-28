@@ -11,5 +11,7 @@ public class CS_BBPouic : MonoBehaviour
     {
         Destroy(fxPleur);
         fx.SetActive(true);
+        QuestSystem.PlayVictoryFX(transform.position);
+        CS_QuestUISystem.Validate(6);
     }
 }

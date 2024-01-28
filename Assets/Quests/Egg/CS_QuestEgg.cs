@@ -29,7 +29,7 @@ public class CS_QuestEgg : MonoBehaviour, CS_I_Fart
     {
         await System.Threading.Tasks.Task.Delay((int)(1000));
         QuestSystem.PlayVictoryFX(gameObject.transform.position);
-        CS_QuestUISystem.Validate(5);
+        CS_QuestUISystem.Validate(2);
     }
 
     private void OnTriggerEnter(Collider other)

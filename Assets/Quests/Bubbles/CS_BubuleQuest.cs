@@ -18,6 +18,8 @@ public class CS_BubuleQuest : MonoBehaviour
             finish = true;
             fx.transform.position = GameObject.FindGameObjectWithTag("Player").transform.position + Vector3.up * 0.5f;
             fx.gameObject.SetActive(true);
+            QuestSystem.PlayVictoryFX(transform.position);
+            CS_QuestUISystem.Validate(7);
         }
     }
 }
