@@ -18,10 +18,11 @@ public class SC_PartySquirrle : MonoBehaviour, CS_I_Fart
 
     bool plugJack = false;
     float timer = 0f;
+    bool success = false;
 
     private void Start()
     {
-        FartMagazin.AddAbo(this, gameObject, 20);
+        FartMagazin.AddAbo(this, gameObject, 5);
         animator.SetInteger("dance",Random.Range((int)1,(int)6));
     }
 
@@ -33,7 +34,7 @@ public class SC_PartySquirrle : MonoBehaviour, CS_I_Fart
         {
             timer += Time.deltaTime;
 
-            if(timer > 5f)
+            if(timer > 10f)
             {
                 plugJack = true;
                 timer = 0f;
@@ -57,7 +58,13 @@ public class SC_PartySquirrle : MonoBehaviour, CS_I_Fart
                 animator.SetTrigger("booh");
             }
 
-            QuestSystem.PlayVictoryFX(enceinte.transform.position);
+            if (!success)
+            {
+                QuestSystem.PlayVictoryFX(enceinte.transform.position);
+                CS_QuestUISystem.Validate(10);
+                success = false;
+            }
+
         }
     }
 

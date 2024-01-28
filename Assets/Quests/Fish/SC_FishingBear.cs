@@ -76,6 +76,7 @@ public class SC_FishingBear : MonoBehaviour
     {
         GetComponent<Animator>().SetTrigger("leave");
         QuestSystem.PlayVictoryFX(transform.position);
+        CS_QuestUISystem.Validate(8);
     }
 
     public void Dissapear()

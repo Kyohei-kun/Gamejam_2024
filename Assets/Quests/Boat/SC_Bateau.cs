@@ -22,7 +22,7 @@ public class SC_Bateau : MonoBehaviour, CS_I_Item, CS_I_Fart
     AudioClip childLaught;
 
     private bool isGrab = false;
-
+    bool success = false;
     public bool IsGrab { get { return isGrab; } }
 
     public void OnGrab()
@@ -31,8 +31,6 @@ public class SC_Bateau : MonoBehaviour, CS_I_Item, CS_I_Fart
         isGrab = true;
         fxPleur.SetActive(false);
 
-        bbAudio.clip = sniffClip;
-        bbAudio.Play();
     }
 
     public void OnUnGrab()
@@ -43,6 +41,7 @@ public class SC_Bateau : MonoBehaviour, CS_I_Item, CS_I_Fart
         gameObject.GetComponent<Rigidbody>().isKinematic = true;
 
         bbAudio.clip = ouinClip;
+        bbAudio.pitch = 1;
         bbAudio.Play();
     }
 
@@ -64,10 +63,19 @@ public class SC_Bateau : MonoBehaviour, CS_I_Item, CS_I_Fart
     public void ParkBoat()
     {
         bbAudio.clip = childLaught;
+        bbAudio.pitch = 1;
+        bbAudio.loop = false;
         bbAudio.Play();
 
+        fxPleur.SetActive(false);
         passenger.GetComponent<Animator>().SetTrigger("happy");
-        QuestSystem.PlayVictoryFX(victoryFxSpawn.position);
+        if(!success)
+        {
+            QuestSystem.PlayVictoryFX(victoryFxSpawn.position);
+            CS_QuestUISystem.Validate(10);
+            success = false;
+        }
+
     }
 
     IEnumerator Move()
