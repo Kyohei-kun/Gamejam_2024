@@ -38,7 +38,7 @@ public class SC_Fish : MonoBehaviour, CS_I_Fart
 
     void Update()
     {
-        if(Vector3.Distance(startpos, transform.position) > 10f)
+        if(Vector3.Distance(startpos, transform.position) > 7f)
         {
             bear.ListFish.Remove(gameObject);
             GameObject.Instantiate(fxExplode,transform.position,Quaternion.identity);
@@ -60,7 +60,7 @@ public class SC_Fish : MonoBehaviour, CS_I_Fart
         while(timer < 1f)
         {
             timer += Time.deltaTime;
-            obj.transform.position += (transform.right * 0.05f);
+            obj.transform.position += (transform.right * 0.1f);
 
             yield return 0f;
         }
