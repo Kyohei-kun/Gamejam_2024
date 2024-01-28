@@ -6,7 +6,7 @@ using UnityEngine.VFX;
 
 public class CS_Pouicette : MonoBehaviour
 {
-    bool finish = true;
+    bool finish = false;
     [SerializeField] VisualEffect FX_Love;
 
     public bool Finish { get => finish; set => finish = value; }
@@ -17,7 +17,7 @@ public class CS_Pouicette : MonoBehaviour
         {
             Finish = true;
             QuestSystem.PlayVictoryFX(transform.position);
-            FX_Love.Play();
+            FX_Love.Play();            
         }        
     }
 }
