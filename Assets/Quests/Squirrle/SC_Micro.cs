@@ -20,6 +20,6 @@ public class SC_Micro : MonoBehaviour, CS_I_Fart
 
     private void Start()
     {
-        FartMagazin.AddAbo(this, gameObject, 5);
+        FartMagazin.AddAbo(this, gameObject, 1.5f);
     }
 }

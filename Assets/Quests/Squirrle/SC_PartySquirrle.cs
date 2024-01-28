@@ -61,7 +61,7 @@ public class SC_PartySquirrle : MonoBehaviour, CS_I_Fart
             if (!success)
             {
                 QuestSystem.PlayVictoryFX(enceinte.transform.position);
-                CS_QuestUISystem.Validate(10);
+                CS_QuestUISystem.Validate(9);
                 success = false;
             }
 

@@ -33,6 +33,7 @@ public class SC_Enceinte : MonoBehaviour
 
     public void PcPlay()
     {
+        
         audioSource.GetComponent<AudioReverbFilter>().enabled = false;
         audioSource.clip = pcMusic;
         audioSource.loop = true;
